@@ -13,7 +13,7 @@ expect "neo>"
 
 send "open wallet $wallet\n"
 
-expect {
+expect -timeout 200 {
 	error {exit 1}
 	timeout {exit 2}
 	"File does not exist" {exit 3}
