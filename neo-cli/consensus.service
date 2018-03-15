@@ -1,0 +1,10 @@
+[Unit]
+Description=Consensus Node (cli-runner)
+
+[Service]
+EnvironmentFile=/etc/consensus
+ExecStart=/usr/lib/swift/start_consensus.tcl ${consensus_wallet} ${consensus_wallet_pass}
+
+[Install]
+WantedBy=multi-user.target
+
