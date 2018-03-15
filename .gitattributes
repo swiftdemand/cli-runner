@@ -61,3 +61,12 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+##########################
+# unix-style line endings
+##########################
+
+*.tcl text eol=lf
+*.service text eol=lf
+*.bash text eol=lf
+*.sh text eol=lf
