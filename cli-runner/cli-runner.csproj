@@ -6,10 +6,10 @@
     <Version>2.7.3</Version>
     <Authors>The Neo Project</Authors>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <AssemblyName>neo-cli</AssemblyName>
+    <AssemblyName>cli-runner</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>Neo.CLI</PackageId>
-    <RootNamespace>Neo</RootNamespace>
+    <RootNamespace>SwiftDemand</RootNamespace>
     <Company>The Neo Project</Company>
     <Product>Neo.CLI</Product>
     <Description>Neo.CLI</Description>
@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Neo" Version="2.7.3" />
+    <PackageReference Include="SwiftProtocol" Version="1.0.0-alpha" />
   </ItemGroup>
 
 </Project>
