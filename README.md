@@ -1,4 +1,4 @@
-![Build Status](https://swiftdemand.visualstudio.com/_apis/public/build/definitions/4cbaee80-4dc8-4d94-ae30-3cf21f1bfa09/2/badge)
+![Build Status](https://swiftdemand.visualstudio.com/_apis/public/build/definitions/bc9381cf-0f46-4ba3-86a0-b4152683eff6/1/badge)
 
 ## Compile from source
 
