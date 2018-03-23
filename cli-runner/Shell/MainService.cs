@@ -31,8 +31,8 @@ namespace Neo.Shell
         private ConsensusWithPolicy consensus;
 
         protected LocalNode LocalNode { get; private set; }
-        protected override string Prompt => "neo";
-        public override string ServiceName => "NEO-CLI";
+        protected override string Prompt => "swift";
+        public override string ServiceName => "CLI-RUNNER";
 
         private void ImportBlocks(Stream stream)
         {

@@ -7,9 +7,9 @@ cd /var/lib/swift
 
 exp_internal 1
 
-spawn /usr/lib/swift/neo-cli /rpc
+spawn /usr/lib/swift/cli-runner /rpc
 
-expect "neo>"
+expect "swift>"
 
 send "open wallet $wallet\n"
 
@@ -26,7 +26,7 @@ expect {
 	failed {exit 4}
 	cancelled {exit 5}
 	timeout {exit 6}
-	"neo>"
+	"swift>"
 }
 
 send "start consensus\n"
