@@ -44,7 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SwiftProtocol" Version="1.0.0-alpha" />
+    <PackageReference Include="SwiftProtocol" Version="1-*"/>
   </ItemGroup>
 
 </Project>
