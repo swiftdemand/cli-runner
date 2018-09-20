@@ -24,14 +24,10 @@
 
   <ItemGroup>
     <None Remove="consensus.service" />
-    <None Remove="start_consensus.tcl" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="consensus.service">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="start_consensus.tcl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -44,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SwiftProtocol" Version="1.0.*"/>
+    <PackageReference Include="SwiftProtocol" Version="1.0.*" />
   </ItemGroup>
 
 </Project>

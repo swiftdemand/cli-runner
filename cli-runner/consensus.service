@@ -2,8 +2,7 @@
 Description=Consensus Node (cli-runner)
 
 [Service]
-EnvironmentFile=/etc/consensus
-ExecStart=/usr/lib/swift/start_consensus.tcl ${consensus_wallet} ${consensus_wallet_pass}
+ExecStart=/usr/lib/swift/cli-runner --rpc
 
 [Install]
 WantedBy=multi-user.target
