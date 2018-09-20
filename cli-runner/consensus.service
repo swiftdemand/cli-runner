@@ -2,6 +2,7 @@
 Description=Consensus Node (cli-runner)
 
 [Service]
+WorkingDirectory=/var/lib/swift
 ExecStart=/usr/lib/swift/cli-runner --rpc
 
 [Install]

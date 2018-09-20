@@ -578,9 +578,6 @@ namespace Neo.Shell
             }
         }
 
-        //TODO: 目前没有想到其它安全的方法来保存密码
-        //所以只能暂时手动输入，但如此一来就不能以服务的方式启动了
-        //未来再想想其它办法，比如采用智能卡之类的
         private bool OnOpenWalletCommand(string[] args)
         {
             if (args.Length < 3)
