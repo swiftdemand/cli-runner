@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Neo.Network.P2P;
+using System.Net;
 
 namespace Neo
 {
@@ -53,12 +54,21 @@ namespace Neo
 
     internal class RPCSettings
     {
+        public IPAddress BindAddress { get; }
         public ushort Port { get; }
         public string SslCert { get; }
         public string SslCertPassword { get; }
 
         public RPCSettings(IConfigurationSection section)
         {
+            var bindAddressSection = section.GetSection("BindAddress");
+            if (bindAddressSection.Exists())
+            {
+                BindAddress = IPAddress.Parse(bindAddressSection.Value);
+            } else
+            {
+                BindAddress = IPAddress.Any;
+            }
             this.Port = ushort.Parse(section.GetSection("Port").Value);
             this.SslCert = section.GetSection("SslCert").Value;
             this.SslCertPassword = section.GetSection("SslCertPassword").Value;
