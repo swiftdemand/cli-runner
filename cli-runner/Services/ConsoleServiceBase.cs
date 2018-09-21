@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Security;
 using System.Text;
+using System.Threading;
 
 namespace Neo.Services
 {
@@ -103,8 +104,22 @@ namespace Neo.Services
         public void Run(string[] args)
         {
             OnStart(args);
-            RunConsole();
-            OnStop();
+            if (ShowPrompt)
+            {
+                RunConsole();
+                OnStop();
+            }
+            else
+            {
+                try
+                {
+                    Thread.Sleep(Timeout.Infinite);
+                }
+                finally
+                {
+                    OnStop();
+                }
+            }
         }
 
         private void RunConsole()

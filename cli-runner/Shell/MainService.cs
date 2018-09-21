@@ -33,7 +33,6 @@ namespace Neo.Shell
         private WalletIndexer indexer;
 
         protected LocalNode LocalNode { get; private set; }
-        protected override string Prompt => "swift";
         public override string ServiceName => "CLI-RUNNER";
 
         private WalletIndexer GetIndexer()
@@ -814,6 +813,11 @@ namespace Neo.Shell
                     case "--rpc":
                     case "-r":
                         useRPC = true;
+                        break;
+                    case "/no-prompt":
+                    case "--no-prompt":
+                    case "-n":
+                        ShowPrompt = false;
                         break;
                 }
             store = new LevelDBStore(Path.GetFullPath(Settings.Default.Paths.Chain));
