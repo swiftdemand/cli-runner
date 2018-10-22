@@ -30,7 +30,7 @@ namespace Neo.Shell
     {
         private const string PeerStatePath = "peers.dat";
 
-        private RpcServerWithWallet rpc;
+        private RpcServer rpc;
         private ConsensusWithLog consensus;
 
         protected LocalNode LocalNode { get; private set; }
