@@ -34,7 +34,6 @@ namespace Neo.Shell
         private ConsensusWithLog consensus;
 
         protected LocalNode LocalNode { get; private set; }
-        protected override string Prompt => "swift";
         public override string ServiceName => "CLI-RUNNER";
 
         private void ImportBlocks(Stream stream, bool read_start = false)
@@ -908,6 +907,11 @@ namespace Neo.Shell
                     case "-r":
                         useRPC = true;
                         break;
+                    case "/no-prompt":
+                    case "--no-prompt":
+                    case "-n":
+                        ShowPrompt = false;
+                        break;
                     case "--nopeers":
                         nopeers = true;
                         break;
@@ -990,7 +994,7 @@ namespace Neo.Shell
                 if (useRPC)
                 {
                     rpc = new RpcServerWithWallet(LocalNode);
-                    rpc.Start(Settings.Default.RPC.Port, Settings.Default.RPC.SslCert, Settings.Default.RPC.SslCertPassword);
+                    rpc.Start(Settings.Default.RPC.BindAddress, Settings.Default.RPC.Port, Settings.Default.RPC.SslCert, Settings.Default.RPC.SslCertPassword);
                 }
             });
         }
