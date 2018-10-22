@@ -993,7 +993,7 @@ namespace Neo.Shell
                 }
                 if (useRPC)
                 {
-                    rpc = new RpcServerWithWallet(LocalNode);
+                    rpc = new RpcServer(LocalNode);
                     rpc.Start(Settings.Default.RPC.BindAddress, Settings.Default.RPC.Port, Settings.Default.RPC.SslCert, Settings.Default.RPC.SslCertPassword);
                 }
             });
